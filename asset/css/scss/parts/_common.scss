@@ -1,7 +1,67 @@
 //ヘッダー,フッター
 
+// spacing
+$spacing-0: 0;
+$spacing-half: 4px;
+$spacing-1: 8px;
+$spacing-2: 16px;
+$spacing-3: 24px;
+$spacing-4: 32px;
+$spacing-5: 48px;
+$spacing-6: 64px;
+$spacing-7: 96px;
+$spacing-8: 128px;
+$spacing-9: 192px;
+$spacing-10: 256px;
+
+//font-size
+$fontsize-M:24px;
+
+
+body {
+    font-family:"Hiragino Kaku Gothic ProN", "Helvetica Neue", Arial, "Hiragino Sans", "Meiryo", sans-serif;
+}
+
 .header{
     position:fixed;
     background-color: aquamarine;
-    height:96px;
+    width: 100%;
+    height:$spacing-7;
+    padding: $spacing-2 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition:padding 0.5s ease-in-out;
+    @media screen and (max-width:1000px) {
+        padding: $spacing-2 98px;
+    }
+    &__logo{
+        img{
+            width: $spacing-6;
+            height:$spacing-6;
+        }
+    }
+    &__menu{
+        font-family: "Inria Serif";
+        color:#333333;
+        ul{
+            display: flex;
+            flex-direction: row;
+            li{
+                font-size: $fontsize-M;
+            }
+            li+li{
+                margin-left: 2.75vw;
+            }
+        }
+    }
+    &__humberger-menu{
+        display: none;
+    }
 }
+
+.navigation{
+    display: none;
+}
+
