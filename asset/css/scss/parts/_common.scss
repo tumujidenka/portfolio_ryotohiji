@@ -32,9 +32,9 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    transition:padding 0.5s ease-in-out;
+    transition:padding 0.3s ease-in-out;
     @media screen and (max-width:1000px) {
-        padding: $spacing-2 98px;
+        padding: $spacing-2 $spacing-7;
     }
     &__logo{
         img{
@@ -65,3 +65,73 @@ body {
     display: none;
 }
 
+@media screen and (max-width: 767px){
+    .header{
+        padding: $spacing-2 $spacing-4;
+        &__menu{
+            display: none;
+        }
+        &__humberger-menu{
+            display: flex;
+            z-index:20;
+            flex-direction: column;
+            justify-content: center;
+            align-items:end;
+            width: $spacing-6;
+            height: $spacing-6;
+            border: 1.5px solid #333333;
+            border-radius: 50%;
+            cursor: pointer;
+            &__line{
+                height: 1px;
+                width: 30px;
+                background-color: #333333;
+                margin: 4px 10px;
+                transition: all 0.3s;
+                transform-origin: right;
+            }
+            & > :nth-child(1){
+                width: 20px;
+            }
+            & > :nth-child(2){
+                width: 30px;
+            }
+            & > :nth-child(3){
+                width: 40px;
+            }
+            
+            //ボタンクリック時
+            & > :nth-child(1).active{
+                transform:rotate(-20deg) translate(-3px,1px);
+                width: 40px;
+            }
+            & > :nth-child(2).active{
+                width: 0;
+            }
+            & > :nth-child(3).active{
+                transform:rotate(20deg) translate(-3px,-1px);
+            }
+        }
+    }
+    .navigation.active{
+        display: block;
+        position:fixed;
+        top: 0;
+        left:0;
+        z-index: 10;
+        width: 100vw;
+        height:100vh;
+        background-color: aliceblue;
+    }
+
+    .nav-menu{
+        padding: $spacing-7 $spacing-4;
+        h2{
+            font-size: 40px;
+            font-family: "Inria Serif";
+        }
+        li+li{
+            margin-top: $spacing-4;
+        }
+    }
+}

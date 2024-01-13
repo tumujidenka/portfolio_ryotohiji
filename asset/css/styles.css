@@ -12,11 +12,11 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  transition: padding 0.5s ease-in-out;
+  transition: padding 0.3s ease-in-out;
 }
 @media screen and (max-width: 1000px) {
   .header {
-    padding: 16px 98px;
+    padding: 16px 96px;
   }
 }
 .header__logo img {
@@ -43,4 +43,72 @@ body {
 
 .navigation {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 16px 32px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__humberger-menu {
+    display: flex;
+    z-index: 20;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 64px;
+    height: 64px;
+    border: 1.5px solid #333333;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .header__humberger-menu__line {
+    height: 1px;
+    width: 30px;
+    background-color: #333333;
+    margin: 4px 10px;
+    transition: all 0.3s;
+    transform-origin: right;
+  }
+  .header__humberger-menu > :nth-child(1) {
+    width: 20px;
+  }
+  .header__humberger-menu > :nth-child(2) {
+    width: 30px;
+  }
+  .header__humberger-menu > :nth-child(3) {
+    width: 40px;
+  }
+  .header__humberger-menu > :nth-child(1).active {
+    transform: rotate(-20deg) translate(-3px, 1px);
+    width: 40px;
+  }
+  .header__humberger-menu > :nth-child(2).active {
+    width: 0;
+  }
+  .header__humberger-menu > :nth-child(3).active {
+    transform: rotate(20deg) translate(-3px, -1px);
+  }
+  .navigation.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+  }
+  .nav-menu {
+    padding: 96px 32px;
+  }
+  .nav-menu h2 {
+    font-size: 40px;
+    font-family: "Inria Serif";
+  }
+  .nav-menu li + li {
+    margin-top: 32px;
+  }
 }/*# sourceMappingURL=styles.css.map */
