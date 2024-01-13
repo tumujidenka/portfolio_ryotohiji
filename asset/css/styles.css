@@ -64,6 +64,32 @@ body {
   margin-top: 32px;
 }
 
+main {
+  widows: 100%;
+  height: 600px;
+}
+
+.footer {
+  border-top: 1px solid #333333;
+}
+.footer__menu {
+  width: 50vw;
+  margin: 8px auto;
+}
+.footer__menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer__copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footer__copyright small {
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 767px) {
   .header {
     padding: 16px 32px;
