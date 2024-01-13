@@ -32,7 +32,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    transition:padding 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
     @media screen and (max-width:1000px) {
         padding: $spacing-2 $spacing-7;
     }
@@ -56,13 +56,33 @@ body {
             }
         }
     }
-    &__humberger-menu{
+    &__hamburger-menu{
         display: none;
     }
 }
 
-.navigation{
-    display: none;
+.navigation{    
+    visibility: hidden;
+    position:fixed;
+    top: 0;
+    left:0;
+    z-index: 10;
+    width: 100vw;
+    height:100vh;
+    background-color: aliceblue;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+    .nav-menu{
+        padding: $spacing-7 $spacing-4;
+        h2{
+            font-size: 40px;
+            font-family: "Inria Serif";
+        }
+        li+li{
+            margin-top: $spacing-4;
+        }
+    }
+
 }
 
 @media screen and (max-width: 767px){
@@ -71,7 +91,7 @@ body {
         &__menu{
             display: none;
         }
-        &__humberger-menu{
+        &__hamburger-menu{
             display: flex;
             z-index:20;
             flex-direction: column;
@@ -82,6 +102,7 @@ body {
             border: 1.5px solid #333333;
             border-radius: 50%;
             cursor: pointer;
+            transition: all 0.2s ease-in-out;
             &__line{
                 height: 1px;
                 width: 30px;
@@ -112,26 +133,15 @@ body {
                 transform:rotate(20deg) translate(-3px,-1px);
             }
         }
+        &__hamburger-menu:hover{
+            width:68px;
+            height:68px;
+            transform: translateX(3px);
+        }
     }
     .navigation.active{
-        display: block;
-        position:fixed;
-        top: 0;
-        left:0;
-        z-index: 10;
-        width: 100vw;
-        height:100vh;
-        background-color: aliceblue;
-    }
-
-    .nav-menu{
-        padding: $spacing-7 $spacing-4;
-        h2{
-            font-size: 40px;
-            font-family: "Inria Serif";
-        }
-        li+li{
-            margin-top: $spacing-4;
-        }
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease, transform 0.5s ease ;
     }
 }
