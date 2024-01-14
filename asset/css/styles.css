@@ -291,7 +291,7 @@ body {
   margin: 0 auto 128px;
 }
 
-.contents {
+.flow__contents {
   margin-top: 64px;
   display: flex;
   flex-direction: column;
