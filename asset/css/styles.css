@@ -73,7 +73,7 @@ body {
 .footer__menu {
   width: 50vw;
   margin: 8px auto;
-  font-size: 12px;
+  font-size: 16px;
 }
 .footer__menu ul {
   display: flex;
@@ -189,4 +189,79 @@ body {
 }
 .main-visual__title p {
   font-size: 24px;
+}
+
+.service {
+  max-width: 1280px;
+  margin: 0 auto 128px;
+}
+
+.title {
+  text-align: center;
+}
+.title p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.title h2 {
+  font-size: 36px;
+  padding-bottom: 8px;
+  font-family: "Inria Serif";
+}
+.title div {
+  height: 2px;
+  width: 64px;
+  background-color: #333333;
+  margin: 0 auto;
+}
+
+.service-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 64px;
+}
+.service-plan__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.service-plan__supplement {
+  text-align: center;
+}
+
+.price-detail__price {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.price-detail__price p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.price-detail__price h3 {
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.price-detail__description {
+  text-align: left;
+  margin-bottom: 32px;
+  line-height: 1.5rem;
+}
+.price-detail__quantity {
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.5rem;
+}
+.price-detail__reference-site {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.price-detail__reference-site p {
+  margin-bottom: 8px;
+}
+.price-detail__reference-site ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }/*# sourceMappingURL=styles.css.map */

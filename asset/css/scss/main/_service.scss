@@ -1,0 +1,79 @@
+@use '../var';
+
+.service{
+    max-width: 1280px;
+    margin:0 auto var.$spacing-8;
+}
+
+.title{
+    text-align: center;
+    p{
+        font-size: var.$fontsize-S;
+        font-weight: bold;
+    }
+    h2{
+        font-size: var.$fontsize-L;
+        padding-bottom: var.$spacing-1;
+        font-family: "Inria Serif";
+    }
+    div{
+        height:2px;
+        width:var.$spacing-6;
+        background-color: #333333;
+        margin: 0 auto;
+    }
+}
+
+.service-plan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:var.$spacing-6;
+    &__price{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    &__supplement{
+        text-align: center;
+    }
+}
+
+.price-detail{
+    &__price{
+        text-align: center;
+        margin-bottom: var.$spacing-4;
+        p{
+            font-size: var.$fontsize-S;
+            font-weight: bold;
+        }
+        h3{
+            margin-top: var.$spacing-1;
+            font-size: var.$fontsize_M;
+            font-weight: bold;
+        }
+    }
+    &__description{
+        text-align: left;
+        margin-bottom: var.$spacing-4;
+        line-height: 1.5rem;
+    }
+    &__quantity{
+        text-align: center;
+        margin-bottom: var.$spacing-4;
+        line-height: 1.5rem;
+    }
+    &__reference-site{
+        text-align: center;
+        margin-bottom: var.$spacing-4;
+        p{
+            margin-bottom: var.$spacing-1;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+
+}
