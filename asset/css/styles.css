@@ -64,11 +64,6 @@ body {
   margin-top: 32px;
 }
 
-main {
-  widows: 100%;
-  height: 600px;
-}
-
 .footer {
   border-top: 1px solid #333333;
   display: flex;
@@ -172,4 +167,9 @@ main {
     color: #ffffff;
     margin: 0 auto;
   }
+}
+.main-visual {
+  width: 100vw;
+  height: 640px;
+  background-color: aqua;
 }/*# sourceMappingURL=styles.css.map */
