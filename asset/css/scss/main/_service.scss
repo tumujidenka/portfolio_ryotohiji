@@ -36,6 +36,10 @@
     }
     &__supplement{
         text-align: center;
+        a{
+            font-weight: bold;
+            text-decoration: underline;
+        }
     }
 }
 
@@ -73,6 +77,22 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            .site-image{
+                transition: all 0.5s;
+                &--left{
+                    transform-origin: left bottom;
+                }
+                &--center{
+                    transform-origin: center bottom;
+                }
+                &--right{
+                    transform-origin: right bottom;
+                }
+            }
+            .site-image:hover{
+                transform: scale(3) translateY(0px);
+                z-index: 10;
+            }
         }
     }
 

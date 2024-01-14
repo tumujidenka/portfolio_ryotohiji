@@ -173,7 +173,7 @@ body {
   height: 640px;
   padding-top: 96px;
   padding-bottom: 128px;
-  background-color: aqua;
+  background-color: #a9cdf1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -229,6 +229,10 @@ body {
 .service-plan__supplement {
   text-align: center;
 }
+.service-plan__supplement a {
+  font-weight: bold;
+  text-decoration: underline;
+}
 
 .price-detail__price {
   text-align: center;
@@ -264,4 +268,20 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.price-detail__reference-site ul .site-image {
+  transition: all 0.5s;
+}
+.price-detail__reference-site ul .site-image--left {
+  transform-origin: left bottom;
+}
+.price-detail__reference-site ul .site-image--center {
+  transform-origin: center bottom;
+}
+.price-detail__reference-site ul .site-image--right {
+  transform-origin: right bottom;
+}
+.price-detail__reference-site ul .site-image:hover {
+  transform: scale(3) translateY(0px);
+  z-index: 10;
 }/*# sourceMappingURL=styles.css.map */
