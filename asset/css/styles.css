@@ -171,5 +171,21 @@ body {
 .main-visual {
   width: 100vw;
   height: 640px;
+  padding-top: 96px;
   background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-visual__title {
+  margin: auto auto;
+  text-align: center;
+  font-family: "Inria Serif";
+}
+.main-visual__title h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.main-visual__title p {
+  font-size: 24px;
 }/*# sourceMappingURL=styles.css.map */
