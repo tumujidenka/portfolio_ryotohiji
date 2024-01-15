@@ -1,6 +1,7 @@
 @use '../var';
 
 .service{
+    display: none;//temp
     max-width: 1280px;
     margin:0 auto var.$spacing-8;
 }
