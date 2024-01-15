@@ -13,6 +13,7 @@ body {
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 @media screen and (max-width: 1000px) {
   .header {
@@ -62,6 +63,25 @@ body {
 }
 .navigation .nav-menu li + li {
   margin-top: 32px;
+}
+
+.title {
+  text-align: center;
+}
+.title p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.title h2 {
+  font-size: 36px;
+  padding-bottom: 8px;
+  font-family: "Inria Serif";
+}
+.title div {
+  height: 2px;
+  width: 64px;
+  background-color: #333333;
+  margin: 0 auto;
 }
 
 .footer {
@@ -196,25 +216,6 @@ body {
   margin: 0 auto 128px;
 }
 
-.title {
-  text-align: center;
-}
-.title p {
-  font-size: 16px;
-  font-weight: bold;
-}
-.title h2 {
-  font-size: 36px;
-  padding-bottom: 8px;
-  font-family: "Inria Serif";
-}
-.title div {
-  height: 2px;
-  width: 64px;
-  background-color: #333333;
-  margin: 0 auto;
-}
-
 .service-plan {
   display: flex;
   flex-direction: column;
@@ -313,4 +314,64 @@ body {
   width: 72px;
   height: 72px;
   margin-right: 32px;
+}
+
+.works {
+  max-width: 1280px;
+  margin: 0 auto 128px;
+}
+.works__contents {
+  max-width: 1208px;
+  margin: 64px auto 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  -moz-column-gap: 64px;
+       column-gap: 64px;
+  row-gap: 48px;
+}
+
+.works-panel {
+  width: 360px;
+  max-width: 360px;
+  height: 440px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.works-panel__plan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 152px;
+  height: 40px;
+  line-height: 40px;
+  background-color: red;
+  font-size: 16px;
+  color: #ffffff;
+}
+.works-panel__title {
+  margin-top: 24px;
+}
+.works-panel__type {
+  margin-top: 24px;
+}
+.works-panel__description {
+  text-align: left;
+  margin: 24px 8px 24px;
+}
+
+.view-more {
+  text-align: center;
+}
+.view-more p {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Inria Serif";
+}
+.view-more div {
+  height: 2px;
+  width: 64px;
+  background-color: #333333;
+  margin: 0 auto;
 }/*# sourceMappingURL=styles.css.map */

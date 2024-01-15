@@ -1,4 +1,4 @@
-//ヘッダー,ナビゲーション,フッター
+//ヘッダー,ナビゲーション,フッター,メニュータイトル
 @use '../var';
 
 body {
@@ -16,6 +16,7 @@ body {
     align-items: center;
     justify-content: space-between;
     transition:all 0.3s ease-in-out;
+    z-index: 1;
     @media screen and (max-width:1000px) {
         padding: var.$spacing-2 var.$spacing-7;
     }
@@ -66,6 +67,25 @@ body {
         }
     }
 
+}
+
+.title{
+    text-align: center;
+    p{
+        font-size: var.$fontsize-S;
+        font-weight: bold;
+    }
+    h2{
+        font-size: var.$fontsize-L;
+        padding-bottom: var.$spacing-1;
+        font-family: "Inria Serif";
+    }
+    div{
+        height:2px;
+        width:var.$spacing-6;
+        background-color: #333333;
+        margin: 0 auto;
+    }
 }
 
 .footer{

@@ -5,25 +5,6 @@
     margin:0 auto var.$spacing-8;
 }
 
-.title{
-    text-align: center;
-    p{
-        font-size: var.$fontsize-S;
-        font-weight: bold;
-    }
-    h2{
-        font-size: var.$fontsize-L;
-        padding-bottom: var.$spacing-1;
-        font-family: "Inria Serif";
-    }
-    div{
-        height:2px;
-        width:var.$spacing-6;
-        background-color: #333333;
-        margin: 0 auto;
-    }
-}
-
 .service-plan{
     display: flex;
     flex-direction: column;
