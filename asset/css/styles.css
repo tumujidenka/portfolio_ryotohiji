@@ -212,7 +212,6 @@ body {
 }
 
 .service {
-  display: none;
   max-width: 1280px;
   margin: 0 auto 128px;
 }
@@ -236,6 +235,9 @@ body {
   text-decoration: underline;
 }
 
+.price-detail {
+  margin: 0 16px;
+}
 .price-detail__price {
   text-align: center;
   margin-bottom: 32px;
@@ -271,7 +273,11 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+.price-detail__reference-site ul li {
+  margin: 0 8px;
+}
 .price-detail__reference-site ul .site-image {
+  max-width: 100%;
   transition: all 0.5s;
 }
 .price-detail__reference-site ul .site-image--left {
