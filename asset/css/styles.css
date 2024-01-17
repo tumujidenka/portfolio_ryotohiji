@@ -511,7 +511,8 @@ body {
   justify-content: center;
 }
 .contact__contents {
-  margin: 64px auto 0;
+  max-width: 1224px;
+  margin: 64px 24px 0;
 }
 
 .progress-line {
@@ -591,7 +592,8 @@ body {
 .form input, .form textarea {
   border: 1px solid #9b9b9b;
   border-radius: 4px;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   padding: 4px;
 }
 .form__name {
@@ -600,7 +602,7 @@ body {
   margin-bottom: 16px;
 }
 .form__name label {
-  width: 192px;
+  width: 232px;
 }
 .form__mail {
   display: flex;
@@ -608,7 +610,7 @@ body {
   margin-bottom: 16px;
 }
 .form__mail label {
-  width: 192px;
+  width: 232px;
 }
 .form__inquiry {
   display: flex;
@@ -616,7 +618,7 @@ body {
   margin-bottom: 48px;
 }
 .form__inquiry label {
-  width: 192px;
+  width: 232px;
 }
 
 .btn {
@@ -646,4 +648,40 @@ body {
 
 .submit {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .form input, .form textarea {
+    border: 1px solid #9b9b9b;
+    border-radius: 4px;
+    max-width: 800px;
+    padding: 4px;
+  }
+  .form__name {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 32px 16px;
+  }
+  .form__name label {
+    width: 256px;
+    margin-bottom: 4px;
+  }
+  .form__mail {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 32px 16px;
+  }
+  .form__mail label {
+    width: 256px;
+    margin-bottom: 4px;
+  }
+  .form__inquiry {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 32px 16px;
+  }
+  .form__inquiry label {
+    width: 256px;
+    margin-bottom: 4px;
+  }
 }/*# sourceMappingURL=styles.css.map */
