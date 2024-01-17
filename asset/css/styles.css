@@ -502,4 +502,148 @@ body {
   .about-detail__description--text p {
     margin: 16px auto;
   }
+}
+.contact {
+  max-width: 1280px;
+  margin: 0 auto 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact__contents {
+  margin: 64px auto 0;
+}
+
+.progress-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.progress-line__step {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.progress-line__step div {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #9b9b9b;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 1;
+}
+.progress-line__step p {
+  margin-top: 4px;
+  color: #9b9b9b;
+  text-align: center;
+}
+.progress-line__step--first::after {
+  content: "";
+  background-color: #9b9b9b;
+  height: 1px;
+  width: 48%;
+  position: absolute;
+  top: 12px;
+  right: 0;
+}
+.progress-line__step--second::before {
+  content: "";
+  background-color: #9b9b9b;
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+.progress-line__step--second::after {
+  content: "";
+  background-color: #9b9b9b;
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  top: 12px;
+  right: 0;
+}
+.progress-line__step--third::before {
+  content: "";
+  background-color: #9b9b9b;
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+.progress-line__step.active div {
+  background-color: #333333;
+}
+.progress-line__step.active p {
+  color: #333333;
+}
+
+.form {
+  line-height: 1.5rem;
+}
+.form input, .form textarea {
+  border: 1px solid #9b9b9b;
+  border-radius: 4px;
+  width: 800px;
+  padding: 4px;
+}
+.form__name {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+.form__name label {
+  width: 192px;
+}
+.form__mail {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+.form__mail label {
+  width: 192px;
+}
+.form__inquiry {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 48px;
+}
+.form__inquiry label {
+  width: 192px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn input {
+  text-align: center;
+  width: 128px;
+  line-height: 3rem;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: 2px solid #9b9b9b;
+  background-color: #d9d9d9;
+  color: #000000;
+  transition: all 0.5s;
+}
+
+.btn:hover input {
+  border: 2px solid #333333;
+}
+
+.back {
+  display: none;
+}
+
+.submit {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

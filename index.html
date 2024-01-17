@@ -332,6 +332,52 @@
                 <div></div>
             </div>
         </div>
+        <div class="contact">
+            <div class="title">
+                <p>お問い合わせ</p>
+                <h2>Contact</h2>
+                <div></div>
+            </div>
+            <div class="contact__contents">
+                <div class="progress-line">
+                    <div class="progress-line__step progress-line__step--first active">
+                        <div>1</div>
+                        <p>入力</p>
+                    </div>
+                    <div class="progress-line__step progress-line__step--second">
+                        <div>2</div>
+                        <p>確認</p>
+                    </div>
+                    <div class="progress-line__step progress-line__step--third">
+                        <div>3</div>
+                        <p>完了</p>
+                    </div>
+                </div>
+                <form class="form" action="" method="post">
+                    <div class="form__name">
+                        <label class="label">お名前（必須）</label>
+                        <input type="text" name="fullname" required value placeholder="山田　太郎">
+                    </div>
+                    <div class="form__mail">
+                        <label class="label">メールアドレス（必須）</label>
+                        <input type="email" name="mail" required value placeholder="yamadataro@example.co.jp">
+                    </div>
+                    <div class="form__inquiry">
+                        <label class="label">お問い合わせ内容</label>
+                        <textarea name="inquiry" required id="inquiry" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="btn confirm">
+                        <input type="submit" value="確認画面へ">
+                    </div>
+                    <div class="btn back">
+                        <input type="submit" value="戻る">
+                    </div>
+                    <div class="btn submit">
+                        <input type="submit" value="送信">
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="footer__menu">
