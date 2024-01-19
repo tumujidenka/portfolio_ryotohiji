@@ -71,6 +71,7 @@
     justify-content: center;
     align-items: center;
     &__number{
+        display: block;
         margin:0 var.$spacing-4 0;
         width: var.$spacing-3;
         height: var.$spacing-3;

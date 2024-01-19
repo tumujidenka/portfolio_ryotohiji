@@ -755,6 +755,7 @@ body {
   align-items: center;
 }
 .pagination__number {
+  display: block;
   margin: 0 32px 0;
   width: 24px;
   height: 24px;
