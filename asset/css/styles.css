@@ -204,9 +204,9 @@ body {
 }
 .main-visual {
   width: 100vw;
-  height: 640px;
+  height: 90vh;
   padding-top: 96px;
-  padding-bottom: 128px;
+  padding-bottom: 96px;
   display: flex;
   flex-direction: column;
   justify-content: center;
