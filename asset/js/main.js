@@ -15,3 +15,45 @@ hamburger.addEventListener('click',function(){
     })
 });
 
+//メニューのスムーススクロール
+document.addEventListener("DOMContentLoaded", function() {
+    const menuLinks = document.querySelectorAll('.header__menu a');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if(targetElement) {
+                const offset = -120;
+                const scrollTarget = targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
+                gsap.to(window, {duration: 1, scrollTo: scrollTarget, ease: "power4.out"});
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuNavLinks = document.querySelectorAll('.nav-menu a');
+
+    menuNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            navigation.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            hamburgerLines.forEach(function(hamburgerLine){
+                hamburgerLine.classList.toggle('active');
+            })
+
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if(targetElement) {
+                const offset = -120;
+                const scrollTarget = targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
+                gsap.to(window, {duration: 1, scrollTo: scrollTarget, ease: "power4.out"});
+            }
+        });
+    });
+});
