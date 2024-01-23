@@ -87,3 +87,32 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+////#service
+//参考サイトをホバーした際の挙動
+const referenceSites = document.querySelectorAll('.site-image');
+
+referenceSites.forEach(referenceSite => {
+    //マウスホバーで、参考サイトの拡大画像をふわっと表示させる
+    referenceSite.addEventListener('mouseenter', ()=>{
+        const siteImage = referenceSite.nextElementSibling;
+        siteImage.style.display = 'block';
+
+        gsap.to(siteImage,{
+            opacity:1,
+            duration:0.3
+        });
+    });
+    //マウスが離れると、参考サイトの拡大画像がふわっと非表示になる
+    referenceSite.addEventListener('mouseleave', ()=>{
+        const siteImage = referenceSite.nextElementSibling;
+
+        gsap.to(siteImage,{
+            opacity:0,
+            duration:0.3,
+            onComplete:()=>{
+                siteImage.style.display = 'none';
+            }
+        });
+    });
+});

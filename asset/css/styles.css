@@ -301,16 +301,6 @@ body {
 }
 .price-detail__reference-site ul .site-image {
   max-width: 100%;
-  transition: all 0.5s;
-}
-.price-detail__reference-site ul .site-image--left {
-  transform-origin: left bottom;
-}
-.price-detail__reference-site ul .site-image--center {
-  transform-origin: center bottom;
-}
-.price-detail__reference-site ul .site-image--right {
-  transform-origin: right bottom;
 }
 .price-detail__reference-site ul .site-image--expanded {
   display: none;
@@ -318,13 +308,9 @@ body {
   position: absolute;
   top: 40%;
   left: 50%;
-  transition: all 1.5s ease;
+  transition: all 0.2s ease;
   transform: translate(-50%, -50%) scale(0.3);
   z-index: 10;
-}
-.price-detail__reference-site ul .site-image:hover + .site-image--expanded {
-  display: block;
-  opacity: 1;
 }
 
 @media screen and (max-width: 767px) {

@@ -66,16 +66,6 @@
             }
             .site-image{
                 max-width:100%;
-                transition: all 0.5s;
-                &--left{
-                    transform-origin: left bottom;
-                }
-                &--center{
-                    transform-origin: center bottom;
-                }
-                &--right{
-                    transform-origin: right bottom;
-                }
             }
 
             .site-image--expanded{
@@ -84,19 +74,14 @@
                 position: absolute;
                 top:40%;
                 left:50%;
-                transition:all 1.5s ease;
+                transition:all 0.2s ease;
                 transform:translate(-50%,-50%) scale(0.3);
                 z-index:10;
-            }
-            .site-image:hover + .site-image--expanded{
-                display: block;
-                opacity:1;
             }
         }
     }
 
 }
-
 
 @media screen and (max-width: 767px){
     .service-plan{
