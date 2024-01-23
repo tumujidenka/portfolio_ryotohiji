@@ -116,7 +116,11 @@ body {
         ul{
             display: flex;
             flex-direction: row;
-            justify-content:space-around;
+            justify-content:center;
+            li{
+                margin: 0 var.$spacing-2;
+
+            }
         }
     }
     &__copyright{
@@ -201,7 +205,10 @@ body {
             ul{
                 display: flex;
                 flex-direction: row;
-                justify-content:space-around;
+                font-size: var.$fontsize-SS;
+                li{
+                    margin: 0 var.$spacing-1;
+                }
             }
         }
         &__copyright{

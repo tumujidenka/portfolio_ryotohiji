@@ -1,0 +1,162 @@
+@use '../var';
+
+.main{
+    background-color: rgb(118, 220, 250);
+}
+.about-child{
+    max-width: 1280px;
+    margin:0 auto var.$spacing-7;
+    padding-top: 192px;
+    &__about{
+        margin-bottom: var.$spacing-8;
+    }
+}
+
+.aboutchild-detail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__profile-image{
+        width: 30%;
+        margin: var.$spacing-1;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__introduction{
+        width: 70%;
+        margin: var.$spacing-3;
+        line-height: 1.5rem;
+        p{
+            margin: var.$spacing-3 auto;
+        }
+        .sns-contact{
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.career-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: var.$spacing-5 var.$spacing-4;
+}
+
+.business{
+    width: 50%;
+    &__title{
+        font-size: var.$fontsize-M;
+        font-family: "Inria Serif";
+        margin-bottom: var.$spacing-4;
+    }
+    &__contents{
+        position: relative;
+        text-align: center;
+        p:nth-child(2){
+            position: absolute;
+            top:-15px;
+            right:13px;    
+        }
+        &--join-company{
+            margin-top: var.$spacing-3;
+        }
+        &--freelance{
+            margin-top: var.$spacing-3;
+        }
+        &__description{
+            margin-top: var.$spacing-1;
+            line-height: 1.3rem;
+        }
+    }
+
+    &__contents::after{
+        position: absolute;
+        top:5px;
+        right:-15px;
+        display: block;
+        content:"";
+        width: 100px;
+        height: 2px;
+        background-color: #333333;
+    }
+
+}
+
+.career-line{
+    width: 30px;
+    height: 200px;
+    transform: translateY(var.$spacing-4);
+    &__line{
+        position: relative;
+        width: 2px;
+        height: 400px;
+        margin:0 auto;
+        background-color: #333333;    
+    }
+    &__circle{
+        width: var.$spacing-2;
+        height: var.$spacing-2;
+        background-color: #333333;
+        border-radius: 50%;
+        position: absolute;
+        left:6px
+    }
+    &__circle1{
+        top:27px;
+    }
+    &__circle2{
+        top:70px;
+    }
+    &__circle3{
+        top:115px;
+    }
+    &__circle4{
+        top:203px;
+    }
+    &__circle5{
+        top:248px;
+    }
+}
+
+.private{
+    width: 50%;
+    &__title{
+        font-size: var.$fontsize-M;
+        font-family: "Inria Serif";
+        margin-bottom: var.$spacing-4;
+    }
+    &__contents{
+        position: relative;
+        text-align: center;
+        p:nth-child(2){
+            position: absolute;
+            top:-15px;
+            left:13px;    
+        }
+        &--reading{
+            margin-top: 120px;
+        }
+        &--presentation{
+            margin-top: var.$spacing-3;
+        }
+        &__description{
+            margin-top: var.$spacing-1;
+            line-height: 1.3rem;
+        }
+    }
+    &__contents::before{
+        position: absolute;
+        top:5px;
+        left:-15px;
+        display: block;
+        content:"";
+        width: 100px;
+        height: 2px;
+        background-color: #333333;
+    }
+}

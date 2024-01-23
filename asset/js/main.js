@@ -60,18 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-    contactLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if(targetElement) {
-            const offset = -120;
-            const scrollTarget = targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
-            gsap.to(window, {duration: 1, scrollTo: scrollTarget, ease: "power4.out"});
-        }
-    });
-
 });
 
 //header>navigation
