@@ -1,5 +1,7 @@
 'use strict';
 
+gsap.registerPlugin(ScrollTrigger);
+
 var hamburger = document.querySelector('.header__hamburger-menu');
 var navigation = document.querySelector('.navigation');
 var hamburgerLines = document.querySelectorAll('.header__hamburger-menu__line');
@@ -116,3 +118,16 @@ referenceSites.forEach(referenceSite => {
         });
     });
 });
+
+////background
+//aboutのところに来たら、背景画像を薄くする
+gsap.to('.background',{
+    scrollTrigger:{
+        trigger:'#about',
+        start: 'top center',
+        toggleActions:'play none none reverse',
+        markers:false,
+    },
+    opacity:0.2,
+    duration:0.3,
+})
