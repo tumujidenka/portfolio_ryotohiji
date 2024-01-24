@@ -292,6 +292,7 @@ body {
   justify-content: space-around;
 }
 .service-plan__supplement {
+  margin: 16px 48px;
   text-align: center;
 }
 .service-plan__supplement a {
@@ -345,7 +346,7 @@ body {
   max-width: 100%;
 }
 .price-detail__reference-site ul .site-image--expanded {
-  display: none;
+  visibility: hidden;
   opacity: 0;
   position: absolute;
   top: 40%;
@@ -368,7 +369,8 @@ body {
     justify-content: space-around;
   }
   .price-detail {
-    margin: 48px 128px;
+    margin: 48px 16px;
+    line-height: 1.5rem;
   }
   .price-detail__price {
     margin-bottom: 16px;
@@ -376,7 +378,6 @@ body {
   .price-detail__description {
     text-align: left;
     margin: 0 48px 16px;
-    line-height: 1.5rem;
   }
   .price-detail .sp {
     display: none;
