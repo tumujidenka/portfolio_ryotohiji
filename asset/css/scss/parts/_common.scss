@@ -59,9 +59,17 @@ body {
     transition: opacity 0.5s ease, visibility 0s linear 0.5s;
     .nav-menu{
         padding: var.$spacing-7 var.$spacing-4;
+        a{
+            display: inline-block;
+            width: fit-content;
+        }
         h2{
             font-size: 40px;
             font-family: "Inria Serif";
+            width: fit-content;
+        }
+        p{
+            width: fit-content;
         }
         li+li{
             margin-top: var.$spacing-4;

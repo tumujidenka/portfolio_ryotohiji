@@ -57,9 +57,20 @@ body {
 .navigation .nav-menu {
   padding: 96px 32px;
 }
+.navigation .nav-menu a {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .navigation .nav-menu h2 {
   font-size: 40px;
   font-family: "Inria Serif";
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navigation .nav-menu p {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .navigation .nav-menu li + li {
   margin-top: 32px;
@@ -580,7 +591,6 @@ body {
   color: #ffffff;
   text-align: center;
   border-radius: 50%;
-  z-index: 1;
 }
 .progress-line__step p {
   margin-top: 4px;
@@ -595,6 +605,7 @@ body {
   position: absolute;
   top: 12px;
   right: 0;
+  z-index: -1;
 }
 .progress-line__step--second::before {
   content: "";
@@ -604,6 +615,7 @@ body {
   position: absolute;
   top: 12px;
   left: 0;
+  z-index: -1;
 }
 .progress-line__step--second::after {
   content: "";
@@ -613,6 +625,7 @@ body {
   position: absolute;
   top: 12px;
   right: 0;
+  z-index: -1;
 }
 .progress-line__step--third::before {
   content: "";
