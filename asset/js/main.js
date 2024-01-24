@@ -145,6 +145,7 @@ referenceSites.forEach(referenceSite => {
     //マウスホバーで、参考サイトの拡大画像をふわっと表示させる
     referenceSite.addEventListener('mouseenter', ()=>{
         const siteImage = referenceSite.nextElementSibling;
+        console.log('enter');
         siteImage.style.display = 'block';
 
         gsap.to(siteImage,{
@@ -160,7 +161,9 @@ referenceSites.forEach(referenceSite => {
             opacity:0,
             duration:0.3,
             onComplete:()=>{
-                siteImage.style.display = 'none';
+                setTimeout(()=>{
+                    siteImage.style.display = 'none';
+                },3000)
             }
         });
     });
