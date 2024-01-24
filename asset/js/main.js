@@ -168,7 +168,17 @@ referenceSites.forEach(referenceSite => {
 
 ////background
 //aboutのところに来たら、背景画像を薄くする
-gsap.to('.background',{
+gsap.to('.background-image',{
+    scrollTrigger:{
+        trigger:'#service',
+        start: 'top center',
+        toggleActions:'play none none reverse',
+        markers:false,
+    },
+    opacity:0.5,
+    duration:0.3,
+})
+gsap.to('.background-image',{
     scrollTrigger:{
         trigger:'#about',
         start: 'top center',
