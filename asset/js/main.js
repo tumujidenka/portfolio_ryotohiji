@@ -190,3 +190,19 @@ gsap.to('.background-image',{
     opacity:0.2,
     duration:0.3,
 })
+
+////#works
+//パネルをふわっと順番に表示させる
+gsap.utils.toArray('.works-panel').forEach((panel, index) => {
+    gsap.from(panel, {
+      opacity: 0,
+      y:20,
+      duration: 0.5,
+      delay: (index * 0.3) -0.1,
+      scrollTrigger: {
+        trigger: '#works',
+        start: 'top center+=200',
+        toggleActions: 'play none none none'
+      }
+    });
+  });
