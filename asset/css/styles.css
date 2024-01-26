@@ -389,7 +389,7 @@ body {
   .price-detail__reference-site ul .site-image--left {
     transform-origin: center center;
   }
-  .price-detail__reference-site ul .site-image:hover + .site-image--expanded {
+  .price-detail__reference-site ul .site-image--expanded {
     display: none;
   }
 }
