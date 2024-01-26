@@ -193,7 +193,9 @@ gsap.to('.background-image',{
 
 ////#works
 //パネルをふわっと順番に表示させる
-gsap.utils.toArray('.works-panel').forEach((panel, index) => {
+const panels = gsap.utils.toArray('.works-panel');
+
+panels.forEach((panel, index) => {
     gsap.from(panel, {
       opacity: 0,
       y:20,
@@ -205,4 +207,20 @@ gsap.utils.toArray('.works-panel').forEach((panel, index) => {
         toggleActions: 'play none none none'
       }
     });
-  });
+});
+
+panels.forEach(panel => {
+    panel.addEventListener('mouseenter', () =>{
+        gsap.to(panel,{
+            scale: 1.1,
+            duration:0.1
+        });
+    });
+
+    panel.addEventListener('mouseleave', () =>{
+        gsap.to(panel, {
+            scale: 1,
+            duration:0.1
+        });
+    });
+});
