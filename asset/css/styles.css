@@ -797,6 +797,7 @@ body {
 .workspanel-child {
   max-width: 360px;
   max-height: 560px;
+  background-color: #ffffff;
   position: relative;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -830,7 +831,8 @@ body {
   margin-top: 16px;
 }
 .workspanel-child__period {
-  margin: 16px auto 24px;
+  margin: 16px auto;
+  padding-bottom: 16px;
 }
 
 .workspanel-child:hover {
@@ -860,6 +862,28 @@ body {
   background-color: #333333;
 }
 
+@media screen and (max-width: 767px) {
+  .works-child__contents {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    -moz-column-gap: 48px;
+         column-gap: 48px;
+    row-gap: 32px;
+  }
+  .workschild-panel__plan {
+    width: 120px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .works-child__contents {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    -moz-column-gap: 48px;
+         column-gap: 48px;
+    row-gap: 32px;
+  }
+}
 .main {
   background-color: rgb(118, 220, 250);
 }
