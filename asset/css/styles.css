@@ -562,7 +562,7 @@ body {
 }
 .about-detail__description--text p {
   margin: 16px auto;
-  line-height: 1.4rem;
+  line-height: 1.8rem;
 }
 
 @media screen and (max-width: 767px) {
