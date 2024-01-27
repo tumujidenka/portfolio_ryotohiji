@@ -949,6 +949,7 @@ body {
   font-size: 24px;
   font-family: "Inria Serif";
   margin-bottom: 32px;
+  font-weight: bold;
 }
 .business__contents {
   position: relative;
@@ -1017,6 +1018,7 @@ body {
   font-size: 24px;
   font-family: "Inria Serif";
   margin-bottom: 32px;
+  font-weight: bold;
 }
 .private__contents {
   position: relative;
@@ -1112,6 +1114,7 @@ body {
     font-size: 24px;
     font-family: "Inria Serif";
     margin-bottom: 32px;
+    font-weight: bold;
   }
   .business-private__contents {
     position: relative;

@@ -59,6 +59,7 @@
         font-size: var.$fontsize-M;
         font-family: "Inria Serif";
         margin-bottom: var.$spacing-4;
+        font-weight: bold;
     }
     &__contents{
         position: relative;
@@ -128,6 +129,7 @@
         font-size: var.$fontsize-M;
         font-family: "Inria Serif";
         margin-bottom: var.$spacing-4;
+        font-weight: bold;
     }
     &__contents{
         position: relative;
@@ -228,6 +230,7 @@
             font-size: var.$fontsize-M;
             font-family: "Inria Serif";
             margin-bottom: var.$spacing-4;
+            font-weight: bold;
         }
         &__contents{
             position: relative;
