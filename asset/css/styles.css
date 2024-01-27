@@ -422,6 +422,7 @@ body {
   display: flex;
   flex-direction: row;
   margin-bottom: 48px;
+  line-height: 1.8rem;
 }
 .flow-menu__contents img {
   width: 72px;
