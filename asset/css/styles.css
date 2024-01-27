@@ -1120,14 +1120,15 @@ body {
     position: relative;
     text-align: center;
   }
-  .business-private__contents p {
-    transition: all 0.3s;
+  .business-private__contents p:nth-child(1) {
+    width: 60%;
+    transform: translateX(30%);
   }
   .business-private__contents p:nth-child(2) {
     font-size: 12px;
     position: absolute;
     top: -10px;
-    left: 8px;
+    left: 24px;
   }
   .business-private__contents--join-company {
     margin-top: 24px;
@@ -1136,7 +1137,7 @@ body {
     margin-top: 24px;
   }
   .business-private__contents__description {
-    margin: 8px auto 0px;
+    margin: 8px auto 0;
     line-height: 1.3rem;
     -moz-text-align-last: left;
          text-align-last: left;
@@ -1160,12 +1161,12 @@ body {
     border-radius: 50%;
     position: absolute;
     top: 0;
-    left: -8px;
+    left: 8px;
   }
   .business-private__contents::before {
     position: absolute;
     top: 7px;
-    left: 0px;
+    left: 20px;
     display: block;
     content: "";
     width: 70px;
@@ -1179,7 +1180,7 @@ body {
     content: "";
     position: absolute;
     top: 30px;
-    left: 0px;
+    left: 16px;
     width: 2px;
     height: 650px;
     background-color: #333333;
@@ -1188,12 +1189,6 @@ body {
 @media screen and (max-width: 470px) {
   .about-child__career .sp {
     display: inline;
-  }
-  .business-private__contents p:nth-child(1), .business-private__contents__description {
-    transform: translateX(30px);
-  }
-  .business-private__contents__description {
-    font-size: 12px;
   }
   .business-private__sp {
     display: inline;

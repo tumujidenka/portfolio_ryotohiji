@@ -235,14 +235,19 @@
         &__contents{
             position: relative;
             text-align: center;
-            p{
-                transition:all 0.3s;
+            // p{
+            //     transition:all 0.3s;
+            // }
+            p:nth-child(1){
+                width: 60%;
+                transform: translateX(30%);
             }
+
             p:nth-child(2){
                 font-size: var.$fontsize-SS;
                 position: absolute;
                 top:-10px;
-                left:8px;    
+                left:24px;    
             }
             &--join-company{
                 margin-top: var.$spacing-3;
@@ -251,7 +256,7 @@
                 margin-top: var.$spacing-3;
             }
             &__description{
-                margin: var.$spacing-1 auto 0px;
+                margin: var.$spacing-1 auto 0;
                 line-height: 1.3rem;
                 text-align-last: left;
                 width: fit-content;
@@ -273,13 +278,13 @@
                 border-radius: 50%;
                 position: absolute;
                 top:0;
-                left:-8px;
+                left:var.$spacing-1;
             }
         }
         &__contents::before{
             position: absolute;
             top:7px;
-            left:0px;
+            left:20px;
             display: block;
             content:"";
             width: 70px;
@@ -295,7 +300,7 @@
         content: '';
         position: absolute;
         top:30px;
-        left:0px;
+        left:var.$spacing-2;
         width: 2px;
         height: 650px;
         background-color: #333333;    
@@ -309,14 +314,6 @@
         }
     }
     .business-private{
-        &__contents{
-            p:nth-child(1),&__description{
-                transform: translateX(30px);
-            }
-            &__description{
-                font-size: var.$fontsize-SS;
-            }
-        }
         &__sp{
             display:inline;
         }
