@@ -1176,8 +1176,14 @@ body {
   }
 }
 @media screen and (max-width: 470px) {
+  .sp {
+    display: inline;
+  }
   .business-private__contents p:nth-child(1), .business-private__contents__description {
-    transform: translateX(60px);
+    transform: translateX(30px);
+  }
+  .business-private__contents__description {
+    font-size: 12px;
   }
   .business-private__sp {
     display: inline;

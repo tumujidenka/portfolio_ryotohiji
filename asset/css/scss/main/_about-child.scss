@@ -297,10 +297,16 @@
 }
     
 @media screen and (max-width: 470px){
+    .sp{
+        display:inline;
+    }
     .business-private{
         &__contents{
             p:nth-child(1),&__description{
-                transform: translateX(60px);
+                transform: translateX(30px);
+            }
+            &__description{
+                font-size: var.$fontsize-SS;
             }
         }
         &__sp{
