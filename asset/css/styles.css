@@ -942,6 +942,9 @@ body {
 .business__contents {
   position: relative;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .business__contents p:nth-child(2) {
   font-size: 12px;
@@ -956,8 +959,12 @@ body {
   margin-top: 24px;
 }
 .business__contents__description {
-  margin-top: 8px;
+  margin: 8px 16px 0px;
   line-height: 1.3rem;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .business__contents--circle {
   content: "";
@@ -1007,6 +1014,9 @@ body {
 .private__contents {
   position: relative;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .private__contents p:nth-child(2) {
   font-size: 12px;
@@ -1024,8 +1034,12 @@ body {
   transform: translateX(5px);
 }
 .private__contents__description {
-  margin-top: 8px;
+  margin: 8px auto 0px;
   line-height: 1.3rem;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .private__contents--circle {
   content: "";
@@ -1054,6 +1068,9 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .sp {
+    display: none;
+  }
   .aboutchild-detail {
     flex-direction: column-reverse;
     align-items: center;
@@ -1100,7 +1117,7 @@ body {
     font-size: 12px;
     position: absolute;
     top: -10px;
-    left: 18px;
+    left: 8px;
   }
   .business-private__contents--join-company {
     margin-top: 24px;
@@ -1109,14 +1126,21 @@ body {
     margin-top: 24px;
   }
   .business-private__contents__description {
-    margin-top: 8px;
+    margin: 8px auto 0px;
     line-height: 1.3rem;
+    -moz-text-align-last: left;
+         text-align-last: left;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .business-private__contents--reading {
     margin-top: 24px;
   }
   .business-private__contents--presentation {
     margin-top: 24px;
+  }
+  .business-private__contents--presentation a {
+    text-decoration: underline;
   }
   .business-private__contents--circle {
     content: "";
@@ -1126,15 +1150,15 @@ body {
     border-radius: 50%;
     position: absolute;
     top: 0;
-    left: 3px;
+    left: -8px;
   }
   .business-private__contents::before {
     position: absolute;
     top: 7px;
-    left: 10px;
+    left: 0px;
     display: block;
     content: "";
-    width: 80px;
+    width: 70px;
     height: 2px;
     background-color: #333333;
   }
@@ -1145,7 +1169,7 @@ body {
     content: "";
     position: absolute;
     top: 30px;
-    left: 10px;
+    left: 0px;
     width: 2px;
     height: 650px;
     background-color: #333333;
