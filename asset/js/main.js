@@ -194,25 +194,58 @@ referenceSites.forEach(referenceSite => {
 //3つのプランの構造を取得
 const priceDetails = document.querySelectorAll('.price-detail');
 
-priceDetails.forEach(priceDetail =>{
-    //各プラン配下の3枚の画像
-    var siteImagesForSlide = priceDetail.querySelector('.slide');
-    console.log(siteImagesForSlide);
+//画面幅に応じて、動的にスライダーを表示/非表示にするためにの関数
+function initSlickSlider() { //スライダー初期化
+    priceDetails.forEach(priceDetail =>{
+        //各プラン配下の3枚の画像
+        var siteImagesForSlide = priceDetail.querySelector('.slide');
+    
+        if ($(window).width() < 768) {
+            // siteImagesForSlide
 
-    if ($(window).width() < 768) {
-        $(document).ready(function(){
-            $(siteImagesForSlide).slick({
-            slidesToShow: 1, // 一度に表示するスライドの数
-            slidesToScroll: 1, // 一度にスクロールするスライドの数
-            arrows: true, // 矢印の表示
-            autoplay: true, // 自動でのスライド送りをしない
+            $(document).ready(function(){
+                $(siteImagesForSlide).not('.slick-initialized').slick({
+                slidesToShow: 1, // 一度に表示するスライドの数
+                slidesToScroll: 1, // 一度にスクロールするスライドの数
+                arrows: false,
+                autoplay: true, 
+                autoplaySpeed:4000,
+                });
             });
-        });
+        }
+    
+    })
+}
+  
+function destroySlickSlider() {//スライダー削除
+    priceDetails.forEach(priceDetail =>{
+        //各プラン配下の3枚の画像
+        var siteImagesForSlide = priceDetail.querySelector('.slide');
+
+        if ($(siteImagesForSlide).hasClass('slick-initialized')) {
+            $(siteImagesForSlide).slick('unslick');
+        }
+    });
+}
+
+  //ロード時、リサイズ時の挙動制御
+  $(document).ready(function(){
+    checkSliderActivation();
+  
+    $(window).resize(function() {
+      checkSliderActivation();
+    });
+  });
+
+  //スライダーのON/OFF
+  function checkSliderActivation() {
+    var windowWidth = $(window).width();
+    if (windowWidth < 768) {
+      initSlickSlider();
+    } else {
+      destroySlickSlider();
     }
-
-})
-
-
+  }
 
 
 ////#works

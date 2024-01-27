@@ -66,6 +66,7 @@
                 max-width: 88px;
             }
             .site-image{
+                margin:0 auto;
                 max-width:100%;
             }
 
@@ -109,11 +110,13 @@
         .sp{
             display:none;
         }
-
         &__reference-site{
+            margin:0 auto;
+
             ul{
                 li{
-                    max-width: 400px;
+                    margin:0 var.$spacing-4;
+                    max-width: none;
                 }
                 .site-image{
                     max-width:100%;

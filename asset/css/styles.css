@@ -344,6 +344,7 @@ body {
   max-width: 88px;
 }
 .price-detail__reference-site ul .site-image {
+  margin: 0 auto;
   max-width: 100%;
 }
 .price-detail__reference-site ul .site-image--expanded {
@@ -383,8 +384,12 @@ body {
   .price-detail .sp {
     display: none;
   }
+  .price-detail__reference-site {
+    margin: 0 auto;
+  }
   .price-detail__reference-site ul li {
-    max-width: 400px;
+    margin: 0 32px;
+    max-width: none;
   }
   .price-detail__reference-site ul .site-image {
     max-width: 100%;
