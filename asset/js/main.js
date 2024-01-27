@@ -96,19 +96,21 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-    contactLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if(targetElement) {
-            const offset = -120;
-            const scrollTarget = targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
-            gsap.to(
-                window,{duration: 1, scrollTo: scrollTarget, ease: "power4.out"});
-        }
-    });
 
+    if(contactLink !== null){
+        contactLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if(targetElement) {
+                const offset = -120;
+                const scrollTarget = targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
+                gsap.to(
+                    window,{duration: 1, scrollTo: scrollTarget, ease: "power4.out"});
+            }
+        });
+    }
 });
 
 //header>navigation
@@ -138,26 +140,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ////background
 //aboutのところに来たら、背景画像を薄くする
-gsap.to('.background-image',{
-    scrollTrigger:{
-        trigger:'#service',
-        start: 'top center',
-        toggleActions:'play none none reverse',
-        markers:false,
-    },
-    opacity:0.5,
-    duration:0.3,
-})
-gsap.to('.background-image',{
-    scrollTrigger:{
-        trigger:'#about',
-        start: 'top center',
-        toggleActions:'play none none reverse',
-        markers:false,
-    },
-    opacity:0.2,
-    duration:0.3,
-})
+
+const service = document.querySelector('#service');
+const about = document.querySelector('#about');
+
+if(service !== null){
+    gsap.to('.background-image',{
+        scrollTrigger:{
+            trigger:'#service',
+            start: 'top center',
+            toggleActions:'play none none reverse',
+            markers:false,
+        },
+        opacity:0.5,
+        duration:0.3,
+    })
+}
+if(about !== null){
+    gsap.to('.background-image',{
+        scrollTrigger:{
+            trigger:'#about',
+            start: 'top center',
+            toggleActions:'play none none reverse',
+            markers:false,
+        },
+        opacity:0.2,
+        duration:0.3,
+    })
+}
 
 ////#service
 //参考サイトをホバーした際の挙動
