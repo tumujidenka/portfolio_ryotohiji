@@ -439,7 +439,7 @@ body {
 }
 .works__contents {
   max-width: 1224px;
-  margin: 64px 24px 32px;
+  margin: 64px 24px 48px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -486,15 +486,27 @@ body {
   text-align: center;
 }
 .view-more p {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   font-family: "Inria Serif";
 }
-.view-more div {
+.view-more a {
+  position: relative;
+}
+.view-more a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 10%;
+  width: 80%;
   height: 2px;
-  width: 64px;
-  background-color: #333333;
-  margin: 0 auto;
+  background: #333333;
+  transition: all 0.3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+.view-more a:hover::after {
+  transform: scale(1, 1);
 }
 
 @media screen and (max-width: 767px) {

@@ -8,7 +8,7 @@
     justify-content: center;
     &__contents{
         max-width: 1224px;
-        margin: var.$spacing-6 var.$spacing-3 var.$spacing-4;
+        margin: var.$spacing-6 var.$spacing-3 var.$spacing-5;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -58,16 +58,30 @@
     text-align: center;
 
     p{
-        font-size: var.$fontsize-S;
+        font-size: var.$fontsize-M;
         font-weight: bold;
         font-family: "Inria Serif";
     }
-    div{
-        height:2px;
-        width:var.$spacing-6;
-        background-color: #333333;
-        margin: 0 auto;
+    a{
+        position: relative;
     }
+    a::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+        background:#333333;
+        transition: all .3s;
+        transform: scale(0, 1);
+        transform-origin: center top;
+    }
+    
+    a:hover::after {
+        transform: scale(1, 1);
+    }
+
 }
 
 
@@ -106,7 +120,6 @@
         &__image{
             img{
                 width:100%;
-                // max-width: fit-content;
             }
         }
     }
