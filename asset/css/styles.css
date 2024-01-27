@@ -687,7 +687,7 @@ body {
   border-radius: 4px;
   width: 100%;
   max-width: 800px;
-  padding: 4px;
+  padding: 8px;
 }
 .form__name {
   display: flex;
