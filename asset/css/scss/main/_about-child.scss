@@ -45,6 +45,9 @@
     justify-content: center;
     text-align: center;
     margin: var.$spacing-5 var.$spacing-4;
+    &__sp{
+        display:none;
+    }
 }
 
 .business{
@@ -73,11 +76,21 @@
             margin-top: var.$spacing-1;
             line-height: 1.3rem;
         }
+        &--circle{
+            content: '';
+            width: var.$spacing-2;
+            height: var.$spacing-2;
+            background-color: #333333;
+            border-radius: 50%;
+            position: absolute;
+            top:0;
+            right:-22px;
+        }
     }
 
     &__contents::after{
         position: absolute;
-        top:5px;
+        top:7px;
         right:-15px;
         display: block;
         content:"";
@@ -86,6 +99,10 @@
         background-color: #333333;
     }
 
+}
+
+.sp{
+    display:none;
 }
 
 .career-line{
@@ -97,29 +114,6 @@
         height: 400px;
         margin:0 auto;
         background-color: #333333;    
-    }
-    &__circle{
-        width: var.$spacing-2;
-        height: var.$spacing-2;
-        background-color: #333333;
-        border-radius: 50%;
-        position: absolute;
-        left:6px
-    }
-    &__circle1{
-        top:27px;
-    }
-    &__circle2{
-        top:70px;
-    }
-    &__circle3{
-        top:115px;
-    }
-    &__circle4{
-        top:203px;
-    }
-    &__circle5{
-        top:248px;
     }
 }
 
@@ -143,11 +137,24 @@
             margin-top: 120px;
         }
         &--presentation{
-            margin-top: var.$spacing-3;
+            margin-top: var.$spacing-5;
+            p:nth-child(1){
+                transform: translateX(5px);
+            }
         }
         &__description{
             margin-top: var.$spacing-1;
             line-height: 1.3rem;
+        }
+        &--circle{
+            content: '';
+            width: var.$spacing-2;
+            height: var.$spacing-2;
+            background-color: #333333;
+            border-radius: 50%;
+            position: absolute;
+            top:0;
+            left:-21px;
         }
     }
     &__contents::before{
@@ -159,5 +166,127 @@
         width: 80px;
         height: 2px;
         background-color: #333333;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .sp{
+        display:block;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .aboutchild-detail{
+        flex-direction: column-reverse;
+        align-items: center;
+        &__profile-image{
+            width: 50%;
+            margin: var.$spacing-1;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .about-child__career{
+        position: relative;
+    }
+    .career-detail{
+        &__sp{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width:100%;
+        }
+    }
+    .career-detail > .business,.career-detail > .career-line,.career-detail > .private{
+        display:none;
+    }
+
+    .business-private{
+        position: relative;
+        width: 100%;
+        &__title{
+            text-align: center;
+            font-size: var.$fontsize-M;
+            font-family: "Inria Serif";
+            margin-bottom: var.$spacing-4;
+        }
+        &__contents{
+            position: relative;
+            text-align: center;
+            p{
+                transition:all 0.3s;
+            }
+            p:nth-child(2){
+                font-size: var.$fontsize-SS;
+                position: absolute;
+                top:-10px;
+                left:18px;    
+            }
+            &--join-company{
+                margin-top: var.$spacing-3;
+            }
+            &--freelance{
+                margin-top: var.$spacing-3;
+            }
+            &__description{
+                margin-top: var.$spacing-1;
+                line-height: 1.3rem;
+            }
+            &--reading{
+                margin-top: var.$spacing-3;
+            }
+            &--presentation{
+                margin-top: var.$spacing-3;
+            }
+            &--circle{
+                content: '';
+                width: var.$spacing-2;
+                height: var.$spacing-2;
+                background-color: #333333;
+                border-radius: 50%;
+                position: absolute;
+                top:0;
+                left:3px;
+            }
+        }
+        &__contents::before{
+            position: absolute;
+            top:7px;
+            left:10px;
+            display: block;
+            content:"";
+            width: 80px;
+            height: 2px;
+            background-color: #333333;
+        }
+        &__sp{
+            display:none;
+        }
+    }
+
+    .business-private::before{
+        content: '';
+        position: absolute;
+        top:30px;
+        left:10px;
+        width: 2px;
+        height: 650px;
+        background-color: #333333;    
+    }
+}
+    
+@media screen and (max-width: 470px){
+    .business-private{
+        &__contents{
+            p:nth-child(1),&__description{
+                transform: translateX(60px);
+            }
+        }
+        &__sp{
+            display:inline;
+        }
     }
 }
