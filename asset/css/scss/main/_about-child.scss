@@ -240,7 +240,7 @@
             // }
             p:nth-child(1){
                 width: 60%;
-                transform: translateX(30%);
+                transform: translateX(100px);
             }
 
             p:nth-child(2){
@@ -260,6 +260,7 @@
                 line-height: 1.3rem;
                 text-align-last: left;
                 width: fit-content;
+                transform: translateX(20px);
                 }
             &--reading{
                 margin-top: var.$spacing-3;

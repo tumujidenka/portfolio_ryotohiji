@@ -1122,7 +1122,7 @@ body {
   }
   .business-private__contents p:nth-child(1) {
     width: 60%;
-    transform: translateX(30%);
+    transform: translateX(100px);
   }
   .business-private__contents p:nth-child(2) {
     font-size: 12px;
@@ -1143,6 +1143,7 @@ body {
          text-align-last: left;
     width: -moz-fit-content;
     width: fit-content;
+    transform: translateX(20px);
   }
   .business-private__contents--reading {
     margin-top: 24px;
