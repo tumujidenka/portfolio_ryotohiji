@@ -136,6 +136,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+////background
+//aboutのところに来たら、背景画像を薄くする
+gsap.to('.background-image',{
+    scrollTrigger:{
+        trigger:'#service',
+        start: 'top center',
+        toggleActions:'play none none reverse',
+        markers:false,
+    },
+    opacity:0.5,
+    duration:0.3,
+})
+gsap.to('.background-image',{
+    scrollTrigger:{
+        trigger:'#about',
+        start: 'top center',
+        toggleActions:'play none none reverse',
+        markers:false,
+    },
+    opacity:0.2,
+    duration:0.3,
+})
 
 ////#service
 //参考サイトをホバーした際の挙動
@@ -168,28 +190,30 @@ referenceSites.forEach(referenceSite => {
     });
 });
 
-////background
-//aboutのところに来たら、背景画像を薄くする
-gsap.to('.background-image',{
-    scrollTrigger:{
-        trigger:'#service',
-        start: 'top center',
-        toggleActions:'play none none reverse',
-        markers:false,
-    },
-    opacity:0.5,
-    duration:0.3,
+//@media screen and (max-width: 767px)でのスライドショー
+//3つのプランの構造を取得
+const priceDetails = document.querySelectorAll('.price-detail');
+
+priceDetails.forEach(priceDetail =>{
+    //各プラン配下の3枚の画像
+    var siteImagesForSlide = priceDetail.querySelector('.slide');
+    console.log(siteImagesForSlide);
+
+    if ($(window).width() < 768) {
+        $(document).ready(function(){
+            $(siteImagesForSlide).slick({
+            slidesToShow: 1, // 一度に表示するスライドの数
+            slidesToScroll: 1, // 一度にスクロールするスライドの数
+            arrows: true, // 矢印の表示
+            autoplay: true, // 自動でのスライド送りをしない
+            });
+        });
+    }
+
 })
-gsap.to('.background-image',{
-    scrollTrigger:{
-        trigger:'#about',
-        start: 'top center',
-        toggleActions:'play none none reverse',
-        markers:false,
-    },
-    opacity:0.2,
-    duration:0.3,
-})
+
+
+
 
 ////#works
 //パネルをふわっと順番に表示させる

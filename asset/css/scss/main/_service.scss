@@ -112,9 +112,11 @@
 
         &__reference-site{
             ul{
+                li{
+                    max-width: 400px;
+                }
                 .site-image{
                     max-width:100%;
-                    scale: (3);
                     &--left{
                         transform-origin: center center;
                     }

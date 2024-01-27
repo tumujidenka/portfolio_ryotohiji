@@ -40,6 +40,9 @@
 }
 
 .career-detail{
+    .sp{
+        display:none;
+    }
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -106,9 +109,6 @@
 
 }
 
-.sp{
-    display:none;
-}
 
 .career-line{
     width: 30px;
@@ -180,16 +180,19 @@
 }
 
 @media screen and (max-width: 950px) {
-    .sp{
-        display:block;
+    .about-child{
+        .sp{
+            display:block;
+        }
     }
 }
 
 @media screen and (max-width: 767px){
-    .sp{
-        display:none;
-    }
+
     .aboutchild-detail{
+        .sp{
+            display:none;
+        }
         flex-direction: column-reverse;
         align-items: center;
         &__profile-image{
@@ -297,8 +300,10 @@
 }
     
 @media screen and (max-width: 470px){
-    .sp{
-        display:inline;
+    .about-child__career{
+        .sp{
+            display:inline;
+        }
     }
     .business-private{
         &__contents{
