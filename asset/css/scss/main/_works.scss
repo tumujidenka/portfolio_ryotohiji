@@ -100,6 +100,12 @@
             font-size: var.$fontsize-SS;
         }
     }
+    .view-more{
+        a::after {
+            transform: scale(1, 1);
+        }
+    }
+
 }
 
 @media screen and (max-width: 428px){

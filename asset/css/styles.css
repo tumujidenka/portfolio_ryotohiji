@@ -521,6 +521,9 @@ body {
     width: 120px;
     font-size: 12px;
   }
+  .view-more a::after {
+    transform: scale(1, 1);
+  }
 }
 @media screen and (max-width: 428px) {
   .works__contents {
