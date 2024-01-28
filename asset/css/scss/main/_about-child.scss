@@ -235,9 +235,7 @@
         &__contents{
             position: relative;
             text-align: center;
-            // p{
-            //     transition:all 0.3s;
-            // }
+            transform:translateX(25px);
             p:nth-child(1){
                 width: 60%;
                 transform: translateX(100px);
@@ -301,7 +299,7 @@
         content: '';
         position: absolute;
         top:30px;
-        left:var.$spacing-2;
+        left:40px;
         width: 2px;
         height: 650px;
         background-color: #333333;    
